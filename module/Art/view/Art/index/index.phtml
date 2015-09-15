@@ -1,0 +1,15 @@
+<table width="200px;">
+<tr>
+	<td>ID</td><td>标题</td><td>作者</td><td>时间</td><td>类型</td><td>内容</td>
+</tr>
+<?php foreach($article as $val): ?>
+	<tr>
+		<td><?php echo $this->escapeHtml($val->art_title);?></td>
+		<td><?php echo $this->escapeHtml($val->art_author);?></td>
+		<td><?php echo $this->escapeHtml($val->art_time);?></td>
+		<td><?php echo $this->escapeHtml($val->art_type);?></td>
+		<td><?php echo $this->escapeHtml($val->art_content);?></td>
+	</tr>
+	
+<?php endforeach; ?>
+</table>

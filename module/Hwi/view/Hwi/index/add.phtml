@@ -1,0 +1,30 @@
+ <?php
+ $title = 'Add new Admin';
+ $this->headTitle($title);
+ ?>
+ <h1><?php echo $this->escapeHtml($title); ?></h1>
+ <?php
+ $form->setAttribute('action', $this->url('Hwi', array('action' => 'add')));
+ $form->prepare(); 
+ echo $this->form()->openTag($form); 
+ echo $this->formHidden($form->get('ad_id'));
+ ?>
+ <table>
+ 	<tr>
+ 		<td>用户名：</td>
+ 		<td> <?php echo $this->formRow($form->get('ad_name')); ?></td>
+ 	</tr>
+ 	<tr>
+ 		<td>密码：</td>
+ 		<td><?php echo $this->formRow($form->get('ad_password')); ?></td>
+ 	</tr>
+ 	<tr>
+ 		<td>用户名：</td>
+ 		<td><?php echo $this->formRow($form->get('submit')); ?></td>
+ 	</tr>
+ </table>
+
+ <?php
+ echo $this->form()->closeTag();
+
+ ?>
